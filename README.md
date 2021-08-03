@@ -40,4 +40,4 @@ terraform apply -var profile=<CUSTOM PROFILE>
 
 This script is for demo only and since it is quite a bizard solution so it will not be maintained by any one. So do not use it for any production system.
 
-In my own test, I discovered that it seems cloudtrail would need some minutes to take effect. Therefore, once the deployment is done, users need to wait for about one minute to test the script.
+In my own test, I discovered that it seems cloudtrail would need some minutes to take effect. Therefore, once the deployment is done, users need to wait for about three minute to have the cloudtrail being in effect. In addition, when there are new IAM resource getting created, it also takes about half an minute for the cloudtrail to collect the event and invoke the lambda. So be patient with this solution .....
